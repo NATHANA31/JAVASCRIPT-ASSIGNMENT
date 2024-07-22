@@ -28,11 +28,19 @@ if (scores[i] == scores[(i + 1)])
 
 }
 
-let median = (scores[4] + scores[5]) / 2;
-let range = scores[9] - scores[0];
+if (scores.length %2 == 0)
+{
+    let median = ((scores[((scores.length / 2) - 1)]) + scores[(scores.length / 2)]) / 2;
+    console.log("the median of the scores is: ", median);
+    
+} else if(scores.length % 2 != 0)
+{
+    let median = scores[((scores.length / 2) - 0.5)];
+    console.log("the median of the scores is: ", median);
+}
+let range = scores[(scores.length - 1)] - scores[0];
 console.log("the range of the scores is:",range)
 console.log("the mean of the scores is:", mean);
-console.log("the median of the scores is: ", median);
 
 
 
